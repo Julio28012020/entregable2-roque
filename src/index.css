@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-title: "EB Garamond", serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-bg: #f2f0eb;
+  --color-text: #1a1a1a;
+  --color-text-light: #555;
+  --color-border: #ddd;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-body min-h-screen m-0 p-0 box-border;
+  }
+}

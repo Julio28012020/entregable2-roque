@@ -1,8 +1,17 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+
 function App() {
   return (
-    <div className="bg-green-100 min-h-screen text-center p-10">
-      <h1 className="text-4xl text-green-800 font-bold">¡Zenith Bonsai con Tailwind!</h1>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   )
 }
 

@@ -1,3 +1,5 @@
+import GalleryItem from '../components/GalleryItem'
+
 const bonsais = [
   { id: 1, nombre: 'Arce Japonés' },
   { id: 2, nombre: 'Pino Negro' },
@@ -19,9 +21,7 @@ function Gallery() {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {bonsais.map((item) => (
-          <div key={item.id} className="bg-[#fcfbf9] border border-border aspect-square flex items-center justify-center shadow-sm">
-            <p className="text-[0.9rem] font-normal text-text text-center px-4">{item.nombre}</p>
-          </div>
+          <GalleryItem key={item.id} {...item} />
         ))}
       </div>
     </main>
